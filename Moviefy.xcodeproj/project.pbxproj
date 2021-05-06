@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		501E424D2643DE8200F0525A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E424C2643DE8200F0525A /* APIClient.swift */; };
 		501E424F2643DFF100F0525A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E424E2643DFF100F0525A /* Request.swift */; };
+		501E42512643E0D000F0525A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42502643E0D000F0525A /* NetworkError.swift */; };
 		AB9F57FA243D54F1006612A3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F57F8243D54F1006612A3 /* MovieCell.swift */; };
 		AB9F57FB243D54F1006612A3 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9F57F9243D54F1006612A3 /* MovieCell.xib */; };
 		AB9F57FE243D57FF006612A3 /* MovieSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F57FD243D57FF006612A3 /* MovieSection.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		501E424C2643DE8200F0525A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		501E424E2643DFF100F0525A /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		501E42502643E0D000F0525A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AB9F57F8243D54F1006612A3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		AB9F57F9243D54F1006612A3 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		AB9F57FD243D57FF006612A3 /* MovieSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSection.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				501E424C2643DE8200F0525A /* APIClient.swift */,
+				501E42502643E0D000F0525A /* NetworkError.swift */,
 				501E424E2643DFF100F0525A /* Request.swift */,
 			);
 			path = Networking;
@@ -240,6 +243,7 @@
 				ABAB4F0A241A172E001E85CA /* SceneDelegate.swift in Sources */,
 				501E424F2643DFF100F0525A /* Request.swift in Sources */,
 				AB9F57FE243D57FF006612A3 /* MovieSection.swift in Sources */,
+				501E42512643E0D000F0525A /* NetworkError.swift in Sources */,
 				501E424D2643DE8200F0525A /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
