@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Home"
         self.view.backgroundColor = UIColor.white
+        setupMovieDBConfig()
         fetchPopular()
     }
     
@@ -38,8 +39,39 @@ class ViewController: UIViewController {
         self.view.addSubview(collectionView)
     }
     
-    func fetchPopular(){
+    func setupMovieDBConfig() {
+        APIClient.shared.getImageConfiguration() { result in
+            switch result {
+            case let .success(dbConfig):
+                DispatchQueue.main.async {
+                    MovieDBConfiguration.current = dbConfig
+                    // Print it out to see what we got, if anything
+                    print(dbConfig)
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
     
+    func fetchPopular(){
+        APIClient.shared.getPopularMovies() { (result) in
+            switch result {
+            case let .success(movies):
+                DispatchQueue.main.async {
+                    self.movies = movies
+                    var basicSection = MovieSection()
+                    basicSection.numberOfItems = movies.count
+                    basicSection.items = movies
+                    self.sections.append(TitleSection(title: "Popular Movies"))
+                    self.sections.append(basicSection)
+                    self.sections.append(TitleSection(title: "Upcoming Movies"))
+                    self.setupCollectionView()
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
 }
 
