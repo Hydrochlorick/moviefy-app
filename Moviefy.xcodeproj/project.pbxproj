@@ -14,6 +14,9 @@
 		501E425526446FC900F0525A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E425426446FC900F0525A /* Response.swift */; };
 		501E42592648748E00F0525A /* MovieDBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42582648748E00F0525A /* MovieDBConfiguration.swift */; };
 		501E425B26507A2100F0525A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E425A26507A2100F0525A /* LoginViewController.swift */; };
+		501E425D26507F5700F0525A /* AuthenticationTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E425C26507F5700F0525A /* AuthenticationTokenResponse.swift */; };
+		501E425F26507FAB00F0525A /* CreateSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E425E26507FAB00F0525A /* CreateSessionResponse.swift */; };
+		501E426126507FDD00F0525A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E426026507FDD00F0525A /* Account.swift */; };
 		AB9F57FA243D54F1006612A3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F57F8243D54F1006612A3 /* MovieCell.swift */; };
 		AB9F57FB243D54F1006612A3 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9F57F9243D54F1006612A3 /* MovieCell.xib */; };
 		AB9F57FE243D57FF006612A3 /* MovieSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F57FD243D57FF006612A3 /* MovieSection.swift */; };
@@ -53,6 +56,9 @@
 		501E425426446FC900F0525A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		501E42582648748E00F0525A /* MovieDBConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBConfiguration.swift; sourceTree = "<group>"; };
 		501E425A26507A2100F0525A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		501E425C26507F5700F0525A /* AuthenticationTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTokenResponse.swift; sourceTree = "<group>"; };
+		501E425E26507FAB00F0525A /* CreateSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionResponse.swift; sourceTree = "<group>"; };
+		501E426026507FDD00F0525A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		AB9F57F8243D54F1006612A3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		AB9F57F9243D54F1006612A3 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		AB9F57FD243D57FF006612A3 /* MovieSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSection.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 			children = (
 				AB9F580F243D6820006612A3 /* Movie.swift */,
 				501E42582648748E00F0525A /* MovieDBConfiguration.swift */,
+				501E425C26507F5700F0525A /* AuthenticationTokenResponse.swift */,
+				501E425E26507FAB00F0525A /* CreateSessionResponse.swift */,
+				501E426026507FDD00F0525A /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,9 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB9F5800243D62FF006612A3 /* TitleSection.swift in Sources */,
+				501E425F26507FAB00F0525A /* CreateSessionResponse.swift in Sources */,
 				AB9F5803243D6327006612A3 /* TitleCell.swift in Sources */,
 				ABAB4F0C241A172E001E85CA /* ViewController.swift in Sources */,
 				501E425B26507A2100F0525A /* LoginViewController.swift in Sources */,
+				501E426126507FDD00F0525A /* Account.swift in Sources */,
+				501E425D26507F5700F0525A /* AuthenticationTokenResponse.swift in Sources */,
 				ABAB4F08241A172E001E85CA /* AppDelegate.swift in Sources */,
 				AB9F5810243D6820006612A3 /* Movie.swift in Sources */,
 				AB9F57FA243D54F1006612A3 /* MovieCell.swift in Sources */,

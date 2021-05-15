@@ -19,6 +19,9 @@ public enum HTTPMethod: String {
 public enum Route: String {
     case movies = "discover/movie"
     case config = "configuration"
+    case token = "authentication/token/new"
+    case session = "authentication/session/new"
+    case account = "account"
 }
 
 struct Request {
