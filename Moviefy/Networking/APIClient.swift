@@ -66,4 +66,50 @@ struct APIClient {
             completion(Result.failure(NetworkError.badRequest))
         }
     }
+    
+    func createRequestToken(_ completion: @escaping (Result<AuthenticationTokenResponse>) -> ()) {
+        do {
+            let request = try Request.configureRequest(from: .token, with: justApiKey, and: .get, contains: nil)
+            session.dataTask(with: request) { (data,response,error) in
+                
+                if let response = response as? HTTPURLResponse, let data = data {
+                    let result = Response.handleResponse(for: response)
+                    switch result {
+                    case .success:
+                        let result = try? JSONDecoder().decode(AuthenticationTokenResponse.self, from: data)
+                        completion(Result.success(result!))
+                        print(result!)
+                    
+                    case let .failure(responseError):
+                        print(responseError)
+                    }
+                }
+            }.resume()
+        } catch {
+            completion(Result.failure(NetworkError.badRequest))
+        }
+    }
+    
+    func createSession(requestToken: String, _ completion: @escaping (Result<CreateSessionResponse>) -> ()) {
+        do {
+            let request = try Request.configureRequest(from: .session, with: justApiKey, and: .get, contains: nil)
+            session.dataTask(with: request) { (data,response,error) in
+                
+                if let response = response as? HTTPURLResponse, let data = data {
+                    let result = Response.handleResponse(for: response)
+                    switch result {
+                    case .success:
+                        let result = try? JSONDecoder().decode(CreateSessionResponse.self, from: data)
+                        completion(Result.success(result!))
+                        print(result!)
+                    
+                    case .failure:
+                        completion(Result.failure(NetworkError.decodingFailed))
+                    }
+                }
+            }.resume()
+        } catch {
+            completion(Result.failure(NetworkError.badRequest))
+        }
+    }
 }
