@@ -19,7 +19,6 @@ struct APIClient {
     
     let justApiKey = [
         "api_key": "d56764af5561617f9d850aa221ee6419"
-
     ]
     
     func getImageConfiguration(_ completion: @escaping (Result<MovieDBConfiguration>) -> ()) {
@@ -39,7 +38,7 @@ struct APIClient {
                         return
                     }
                 }
-            }
+            }.resume()
         } catch {
             fatalError(NetworkError.badRequest.rawValue)
         }
